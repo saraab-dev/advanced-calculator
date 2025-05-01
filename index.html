@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="light-theme">
+    <div class="calculator-container">
+        <div class="theme-switcher">
+            <button id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <div class="calculator">
+            <div class="display">
+                <div class="previous-operand"></div>
+                <div class="current-operand">0</div>
+            </div>
+            <div class="calculator-tabs">
+                <button class="tab-btn active" data-tab="basic">Basic</button>
+                <button class="tab-btn" data-tab="scientific">Scientific</button>
+                <button class="tab-btn" data-tab="conversion">Conversion</button>
+            </div>
+            <div class="calculator-content">
+                <div class="tab-content active" id="basic">
+                    <div class="buttons-grid">
+                        <button class="operator" data-action="clear">AC</button>
+                        <button class="operator" data-action="delete">DEL</button>
+                        <button class="operator" data-action="percent">%</button>
+                        <button class="operator" data-action="divide">÷</button>
+                        <button class="number">7</button>
+                        <button class="number">8</button>
+                        <button class="number">9</button>
+                        <button class="operator" data-action="multiply">×</button>
+                        <button class="number">4</button>
+                        <button class="number">5</button>
+                        <button class="number">6</button>
+                        <button class="operator" data-action="subtract">-</button>
+                        <button class="number">1</button>
+                        <button class="number">2</button>
+                        <button class="number">3</button>
+                        <button class="operator" data-action="add">+</button>
+                        <button class="number zero">0</button>
+                        <button class="number">.</button>
+                        <button class="operator equals" data-action="calculate">=</button>
+                    </div>
+                </div>
+                <div class="tab-content" id="scientific">
+                    <div class="buttons-grid scientific-grid">
+                        <button class="operator" data-action="sin">sin</button>
+                        <button class="operator" data-action="cos">cos</button>
+                        <button class="operator" data-action="tan">tan</button>
+                        <button class="operator" data-action="power">x^y</button>
+                        <button class="operator" data-action="sqrt">√</button>
+                        <button class="operator" data-action="log">log</button>
+                        <button class="operator" data-action="ln">ln</button>
+                        <button class="operator" data-action="factorial">x!</button>
+                        <button class="operator" data-action="pi">π</button>
+                        <button class="operator" data-action="e">e</button>
+                        <button class="operator" data-action="rad">Rad</button>
+                        <button class="operator" data-action="deg">Deg</button>
+                    </div>
+                </div>
+                <div class="tab-content" id="conversion">
+                    <div class="conversion-container">
+                        <select id="conversionType">
+                            <option value="length">Length</option>
+                            <option value="weight">Weight</option>
+                            <option value="temperature">Temperature</option>
+                        </select>
+                        <div class="conversion-inputs">
+                            <div class="input-group">
+                                <input type="number" id="fromValue">
+                                <select id="fromUnit"></select>
+                            </div>
+                            <div class="swap-btn">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <div class="input-group">
+                                <input type="number" id="toValue" readonly>
+                                <select id="toUnit"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
